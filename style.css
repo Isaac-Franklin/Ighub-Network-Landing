@@ -6,19 +6,6 @@
     align-items: center;
     
 }
-
-
-/* .generalout{
-    position: absolute;
-    align-items: center;
-    width: 90%;
-    margin: auto;
-} */
-/* .body img{
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-} */
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
@@ -67,22 +54,7 @@ background-color: #717171;
 
 }
 
-
-
-
 /* END OF GENERAL SECTION EDITS */
-
-
-
-/* body::-webkit-scrollbar{
-    display: none;
-} */
-
-
-/* .slideshow-container::-webkit-scrollbar{
-    display: none;
-} */
-
 /* BODY OVERLAY EFFECT BELOW */
 .overlay{
     position: relative;
@@ -153,59 +125,59 @@ form img{
 /* START OF BUTTON EDITS BELOW */
 /* From uiverse.io by @adamgiebl */
 button {
-    font-family: inherit;
-    font-size: 20px;
-    background: rgb(8, 8, 8);
-    color: white;
-    padding: 0.7em 1em;
-    padding-left: 0.9em;
-    display: flex;
-    align-items: center;
-    border: none;
-    overflow: hidden;
-    transition: all 0.2s;
-    cursor: pointer;
-    width: 400px;
-   }
-   
-   button span {
-    display: block;
-    margin-left: 0.3em;
-    transition: all 0.3s ease-in-out;
-   }
-   
-   button svg {
-    display: block;
-    transform-origin: center center;
-    transition: transform 0.3s ease-in-out;
-   }
-   
-   button:hover .svg-wrapper {
-    animation: fly-1 0.6s ease-in-out infinite alternate;
-   }
-   
-   button:hover svg {
-    transform: translateX(1.9em) rotate(45deg) scale(1.1);
-   }
-   
-   button:hover span {
-    transform: translateX(5em);
-   }
-   
-   button:active {
-    transform: scale(0.95);
-   }
-   
-   @keyframes fly-1 {
-    from {
-     transform: translateY(0.1em);
-    }
-   
-    to {
-     transform: translateY(-0.1em);
-    }
-   }
-   
+font-family: inherit;
+font-size: 20px;
+background: rgb(8, 8, 8);
+color: white;
+padding: 0.7em 1em;
+padding-left: 0.9em;
+display: flex;
+align-items: center;
+border: none;
+overflow: hidden;
+transition: all 0.2s;
+cursor: pointer;
+width: 400px;
+}
+
+button span {
+display: block;
+margin-left: 0.3em;
+transition: all 0.3s ease-in-out;
+}
+
+button svg {
+display: block;
+transform-origin: center center;
+transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+transform: translateX(1.9em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+transform: translateX(5em);
+}
+
+button:active {
+transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+from {
+    transform: translateY(0.1em);
+}
+
+to {
+    transform: translateY(-0.1em);
+}
+}
+
    
 
 /* BUTTON EDITS END HERE */
@@ -278,8 +250,8 @@ height: 440px
 
 #inecbtn:hover{
     transition: 0.4s ease-in-out;
-    background-color: rgb(61,66,150);
-    color: white;
+    background-color: white;
+    color: grey;
     font-style: italic;
 
 }
@@ -297,8 +269,62 @@ height: 440px
 }
 /* MEDIA QUERY FOR TABLETS AND IPADS */
 
+/* MOBILE SLIDES EDITS BELOW */
+
+.pvcslidesmobileout{
+    display: none;
+    width: 100vw;
+    z-index: 5;
+    height: 100px;
+    position: absolute;
+    top: -360px;
+    /* right: 40%; */
+}
+
+.slidespvcmobilebtn{
+    margin-left: -46px;
+    width: 420px;
+    align-items: center;
+}
+
+/* .slidespvcmobilebtn button{
+    align-items: center;
+    width: 90%;
+    padding-left: 20px;
+} */
+
+#slidespvcmobilebtnid{
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-left: 10%;
+}
+
+
+.pvcslidemobilein{
+    z-index: 5;
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.slidespvcmobile img{
+    width: 150px;
+    height: 150px
+}
 
 @media only screen and (max-width: 1230px) {
+    .logo img{
+        width: 100px;
+    }
+
+    .logo{
+        position: absolute;
+        top: 28px;
+        right: 40%;
+        z-index: 6;
+    }
 
     .general{
         display: grid;
@@ -348,187 +374,56 @@ height: 440px
         width: 300px;
         margin-left: 45px;
        }
-   
 }
 
-/*@media only screen and (max-width: 820px) {
-
- 
-    body{
-        width: 800px;
-        text-align: center;
-        overflow: hidden;
-    }
-    .logo img{
-        width: 150px;
-    }
-    .logo{
+@media only screen and (max-width: 430px) {
+    .pvcslidesmobileout{
+        display: block;
+        width: 100vw;
+        z-index: 5;
+        height: 100px;
+        padding-top: 800px;
         position: absolute;
-        top: 40px;
-        right: 40%;
+        bottom: 580px;
+        /* right: 40%; */
     }
 
-
-    .glass-container{
-        position: absolute;
-        top: 125px;
-        left: 90px;
-        width: 600px;
-        height: 375px;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        gap: 20px;
-        border-radius: 0px;
-        backdrop-filter: blur(7px);
-        background-color: rgba(5,5,5, 0.173);
-        box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
-        border: 0px rgba(255,255,255,0.4) solid;
-        border-bottom: 0px rgba(40,40,40,0.35) solid;
-        border-right: 0px rgba(40,40,40,0.35) solid;
+    .pvcslidesmobileout::-webkit-scrollbar{
+        display: none;
     }
 
     .pvcslides{
-        margin: auto;
-        position: absolute;
-        height: 575px;
-        top: 500px;
-        left: 90px;
-        display: flex;
-        width: 600px;
-        scroll-behavior: smooth;
-        overflow: hidden;
-        cursor: pointer;
-    }
-
-    .pvcslides img{
-        width: 600px;
-        height: 640px
-    }
-    rgba(169, 205, 69, 0.774)
-    #inecbtn{
         display: none;
-        background-color: white;
-        position: relative;
-        color: black;
-        width: 550px;
-        text-align: center;
-        font-weight: bold;
-        font-size: 1.8rem;
-        padding-left: 0px;
     }
-
-    .inecbtnsection{
-        position: absolute;
-        top: 1005px;
-        left: 120px;
-        align-items: center;
-    }
-}
-
-@media only screen and (max-width: 375px) {
-    
-    body{
-        width: 375px;
-        text-align: center;
-        overflow: hidden;
-    }
-    .logo img{
-        width: 100px;
-    }
-    .logo{
-        position: absolute;
-        top: 30px;
-        right: 70%;
-        z-index: 3;
-    }
-
-    form input{
-        position: relative;
-        width: 350px;
-        height: 50px;
-        margin-bottom: 30px;
-        border: none;
-        padding-left: 50px;
-        font-size: 1rem;
-    }
-
-    button {
-        font-family: inherit;
-        font-size: 20px;
-        background: rgb(8, 8, 8);
-        color: white;
-        padding: 0.7em 1em;
-        padding-left: 0.9em;
-        display: flex;
-        align-items: center;
-        border: none;
-        border-radius: 16px;
-        overflow: hidden;
-        transition: all 0.2s;
-        cursor: pointer;
-        width: 350px;
-        margin-left: 25px;
-       }
 
     .glass-container{
-        position: absolute;
-        top: 20px;
-        left: 10px;
-        width: 350px;
-        height: 375px;
+        width: 400px;
+        left: 30px;
+        height: 439px;
         color: white;
-        display: flex;
+        /* display: flex; */
         justify-content: center;
         align-items: center;
-        margin: auto;
         gap: 20px;
         border-radius: 0px;
         backdrop-filter: blur(2px);
-        background-color: rgba(5,5,5, 0.173);
-        box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
-        border: 0px rgba(255,255,255,0.4) solid;
+        background-color: rgba(5, 5, 5, 0.034);
+        box-shadow: rgba(0, 0, 0, 0.151) 2px 8px 8px;
+        border: 0px rgba(255, 255, 255, 0.164) solid;
         border-bottom: 0px rgba(40,40,40,0.35) solid;
         border-right: 0px rgba(40,40,40,0.35) solid;
     }
 
-    .pvcslides{
-        margin: auto;
+    .general{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        align-items: top;
         position: absolute;
-        height: 575px;
-        top: 350px;
-        left: 10px;
-        width: 350px;
-        display: flex;
-        scroll-behavior: smooth;
-        overflow: hidden;
-        cursor: pointer;
+        top: 50px;
+        left: 20%;
+    
     }
 
-    .pvcslides img{
-        width: 350px;
-        height: 320px
-    }
-
-    #inecbtn{
-        display: none;
-        background-color: rgba(169, 205, 69, 0.774);
-        position: relative;
-        color: black;
-        width: 300px;
-        text-align: center;
-        font-weight: bold;
-        font-size: 18px;
-        padding-left: 50px;
-    }
-
-    .inecbtnsection{
-        position: absolute;
-        top: 603px;
-        left: 0px;
-        align-items: center;
-    }
-} */
-
+    
+}

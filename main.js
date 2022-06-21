@@ -20,29 +20,9 @@ function showSlides() {
   setTimeout(showSlides, 4000);
 }
 //END OF BACKGROUND IMAGES SLIDER EFFECT BELOW
+
 // START OF PVC SECTION EDITS FOR SLIDER
 
-// let slideIndex2 = 0;
-// showSlides2();
-
-// function showSlides2() {
-//   let i;
-//   let slides2 = document.getElementsByClassName("pvcslides");
-//   for (i = 0; i < slides.length; i++) {
-//     pvcslides[i].style.display = "none";
-//   }
-
-//   slideIndex2++;
-
-//   if (slideIndex2 > slides2.length) {
-//     slideIndex2 = 1;
-//   }
-
-//   pvcslides[slideIndex2 - 1].style.display = "block";
-
-//   setTimeout(showSlides, 3000);
-// }
-// SECOND TRIAL FOR PVC SLIDE
 setInterval(slide, 3000);
 
 let slides2 = document.querySelector(".pvcslidesinner");
@@ -64,37 +44,6 @@ function slide() {
     }
   }
 }
-//   if (screen.width <= 375) return slides2.scrollTo(image, 0), repeat();
-
-//   function repeat() {
-//     if (image === 350) {
-//       return (image = 700);
-//     } else if (image === 700) {
-//       return (image = 1050);
-//     } else if (image === 1050) {
-//       return (image = 1400);
-//     } else if (image === 1400) {
-//       return (image = 350);
-//     }
-//   }}
-
-// if (screen.width < 820) {
-//   function slide2() {
-//     return slides2.scrollTo(image, 0), repeat();
-
-//     function repeat() {
-//       if (image === 400) {
-//         return (image = 800);
-//       } else if (image === 800) {
-//         return (image = 1200);
-//       } else if (image === 1200) {
-//         return (image = 1600);
-//       } else if (image === 1600) {
-//         return (image = 400);
-//       }
-//     }
-//   }
-// }
 
 // END OF PVC SECTION EDITS FOR SLIDER
 
@@ -115,3 +64,29 @@ function hoverrevealkill() {
 }
 
 // END OF INEC BUTTON EDITS
+
+// START OF PVC SECTION EDITS FOR SLIDER IN MOBILE VIEW
+
+setInterval(slidemobile, 3000);
+
+let Slidesmob = document.querySelector(".pvcslidemobilein");
+
+// var imagemobile = document.querySelector(".slidespvcmobile img").width;
+imagemobile = 300;
+function slidemobile() {
+  return Slidesmob.scrollTo(imagemobile, 0), repeat2();
+
+  function repeat2() {
+    if (imagemobile === 300) {
+      return (imagemobile = 600);
+    } else if (imagemobile === 600) {
+      return (imagemobile = 900);
+    } else if (imagemobile === 900) {
+      return (imagemobile = 1300);
+    } else if (imagemobile === 1300) {
+      return (imagemobile = 300);
+    }
+  }
+}
+
+// END OF PVC SECTION EDITS FOR SLIDER IN MOBILE VIEW
