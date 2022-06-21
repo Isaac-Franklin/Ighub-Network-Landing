@@ -48,26 +48,60 @@ setInterval(slide, 3000);
 let slides2 = document.querySelector(".pvcslidesinner");
 
 var image = document.querySelector(".slidespvc img").width;
+
 function slide() {
   return slides2.scrollTo(image, 0), repeat();
-}
-function repeat() {
-  if (image === 400) {
-    return (image = 800);
-  } else if (image === 800) {
-    return (image = 1200);
-  } else if (image === 1200) {
-    return (image = 1600);
-  } else if (image === 1600) {
-    return (image = 400);
+
+  function repeat() {
+    if (image === 400) {
+      return (image = 800);
+    } else if (image === 800) {
+      return (image = 1200);
+    } else if (image === 1200) {
+      return (image = 1600);
+    } else if (image === 1600) {
+      return (image = 400);
+    }
   }
 }
+//   if (screen.width <= 375) return slides2.scrollTo(image, 0), repeat();
+
+//   function repeat() {
+//     if (image === 350) {
+//       return (image = 700);
+//     } else if (image === 700) {
+//       return (image = 1050);
+//     } else if (image === 1050) {
+//       return (image = 1400);
+//     } else if (image === 1400) {
+//       return (image = 350);
+//     }
+//   }}
+
+// if (screen.width < 820) {
+//   function slide2() {
+//     return slides2.scrollTo(image, 0), repeat();
+
+//     function repeat() {
+//       if (image === 400) {
+//         return (image = 800);
+//       } else if (image === 800) {
+//         return (image = 1200);
+//       } else if (image === 1200) {
+//         return (image = 1600);
+//       } else if (image === 1600) {
+//         return (image = 400);
+//       }
+//     }
+//   }
+// }
+
 // END OF PVC SECTION EDITS FOR SLIDER
 
 // START OF INEC BUTTON EDITS
 
 var section = document.querySelector(".pvcslides");
-var buttoninec = document.querySelector("#inecbtn");
+var buttoninec = document.querySelector(".inecbtnsection");
 
 function hoverreveal() {
   buttoninec.style.display = "block";
