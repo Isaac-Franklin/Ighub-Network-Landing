@@ -275,7 +275,7 @@ height: 440px
 
 .pvcslidesmobileout{
     /* visibility: hidden; */
-    /* display: none; */
+    display: none;
     width: 100vw;
     z-index: 5;
     height: 100px;
@@ -412,15 +412,11 @@ height: 440px
     
     }
 
-    /* .pvcslidesmobileout{
-       
+    .pvcslidesmobileout{
+       display: block;
         width: 100vw;
-        z-index: 5;
-        height: 100px;
-        padding-top: 800px;
-        position: absolute;
-        bottom: 580px;
-    } */
+        z-index: 2;
+    }
 
     
 }
