@@ -1,4 +1,4 @@
- *{
+*{
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
@@ -234,7 +234,7 @@ height: 440px
     position: absolute;
     bottom: 2px;
     align-items: center;
-    z-index: 2;
+    z-index: 9;
     animation-name: slidein;
     animation-duration: 1s;
 }
@@ -264,6 +264,7 @@ height: 440px
     /* position: relative; */
     color: black;
     width: 400px;
+    /* margin: auto; */
     text-align: center;
     font-weight: bold;
     font-size: 1.2rem;
@@ -297,7 +298,7 @@ height: 440px
 } */
 
 #slidespvcmobilebtnid{
-    width: 100v;
+    width: 100%;
     text-align: center;
     margin-bottom: 20px;
     padding-left: 100px;
@@ -415,7 +416,7 @@ height: 440px
     .pvcslidesmobileout{
        display: block;
         width: 100vw;
-        z-index: 2;
+        z-index: 1;
     }
 
     
